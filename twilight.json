@@ -966,6 +966,13 @@
                     "maxLength": 30
                 }
             ]
+        },
+        {
+            "key": "b55dcdc7-2a46-486e-b82d-9a5e5fcb4e45",
+            "title": "بانر رئيسي (رعد)",
+            "icon": "sicon-book-open",
+            "path": "home.banner-main",
+            "fields": []
         }
     ],
     "support_url": null,

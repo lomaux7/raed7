@@ -1,0 +1,20 @@
+<section class="relative bg-cover bg-center h-96 rounded-xl overflow-hidden mb-6"
+         style="background-image: url('{{ fields.image | default('') }}')">
+    <div class="absolute inset-0 bg-black/50 flex items-center justify-center text-center text-white px-4">
+        <div>
+            {% if fields.title is not empty %}
+                <h2 class="text-3xl font-bold mb-2">{{ fields.title }}</h2>
+            {% endif %}
+
+            {% if fields.sub_title is not empty %}
+                <p class="text-lg mb-4">{{ fields.sub_title }}</p>
+            {% endif %}
+
+            {% if fields.button_text is not empty and fields.button_url is not empty %}
+                <a href="{{ fields.button_url }}" class="inline-block px-6 py-2 bg-white text-black rounded-full hover:bg-gray-200 transition">
+                    {{ fields.button_text }}
+                </a>
+            {% endif %}
+        </div>
+    </div>
+</section>

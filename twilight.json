@@ -984,6 +984,66 @@
                     "icon": "sicon-image",
                     "value": "https://assets.apidog.com/app/apidoc-image/custom/20240211/0cefa612-5484-4a31-8233-b6efef638af1.png",
                     "required": true
+                },
+                {
+                    "id": "title",
+                    "type": "string",
+                    "format": "text",
+                    "label": "String",
+                    "description": "العنوان الرئيسي",
+                    "labelHTML": null,
+                    "placeholder": "Placeholder text ..",
+                    "icon": "sicon-format-text-alt",
+                    "value": null,
+                    "multilanguage": false,
+                    "required": false,
+                    "minLength": 6,
+                    "maxLength": 30
+                },
+                {
+                    "id": "sub_title",
+                    "type": "string",
+                    "format": "textarea",
+                    "label": "Text Area",
+                    "description": "العنوان الفرعي",
+                    "labelHTML": null,
+                    "placeholder": "Your text here",
+                    "icon": "sicon-typography",
+                    "value": null,
+                    "multilanguage": false,
+                    "required": false,
+                    "minLength": 20,
+                    "maxLength": 255
+                },
+                {
+                    "id": "button_url",
+                    "type": "string",
+                    "format": "url",
+                    "inputType": "url",
+                    "label": "URL",
+                    "description": "رابط الزر",
+                    "labelHTML": null,
+                    "placeholder": "e.g. https://salla.sa",
+                    "icon": "sicon-link",
+                    "value": null,
+                    "required": false,
+                    "minLength": 6,
+                    "maxLength": 30
+                },
+                {
+                    "id": "button_text",
+                    "type": "string",
+                    "format": "text",
+                    "label": "String 1",
+                    "description": "نص الزر",
+                    "labelHTML": null,
+                    "placeholder": "Placeholder text ..",
+                    "icon": "sicon-format-text-alt",
+                    "value": null,
+                    "multilanguage": false,
+                    "required": false,
+                    "minLength": 6,
+                    "maxLength": 30
                 }
             ]
         }

@@ -1046,6 +1046,13 @@
                     "maxLength": 30
                 }
             ]
+        },
+        {
+            "key": "b43f9b5a-08a3-4347-aa1f-f645a9a4b232",
+            "title": "شريط اعلاني (رعد)",
+            "icon": "sicon-store",
+            "path": "header.advertisement",
+            "fields": []
         }
     ],
     "support_url": null,

@@ -1,0 +1,26 @@
+<section class="filters-products-section">
+    <!-- مكون الفلاتر -->
+    <salla-filters id="filters"></salla-filters>
+  
+    <!-- مكون عرض المنتجات -->
+    <salla-products-list
+      id="products"
+      source="{{ fields.source }}"
+      source-value="{{ fields.source_value }}"
+      filters-results
+    ></salla-products-list>
+  </section>
+  
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const filters = document.getElementById("filters");
+      const products = document.getElementById("products");
+  
+      if (filters && products) {
+        filters.addEventListener("changed", function () {
+          products.applyFilters();
+        });
+      }
+    });
+  </script>
+  

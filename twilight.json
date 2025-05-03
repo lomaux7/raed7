@@ -1168,6 +1168,28 @@
                 "maxLength": 10
               }
             ]
+          },
+          {
+            "key": "filters-products-widget",
+            "title": "فلترة وعرض المنتجات",
+            "icon": "sicon-filter",
+            "path": "home.filters-products", 
+            "fields": [
+              {
+                "id": "source",
+                "type": "string",
+                "format": "text",
+                "label": "نوع المصدر",
+                "value": "categories"
+              },
+              {
+                "id": "source_value",
+                "type": "string",
+                "format": "text",
+                "label": "معرّف المصدر",
+                "value": "123456"
+              }
+            ]
           }
           
     ],

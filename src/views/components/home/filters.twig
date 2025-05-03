@@ -1,0 +1,37 @@
+<section class="py-6">
+    <div class="container">
+      {% if component.title %}
+        <h2 class="text-2xl font-bold mb-2">{{ component.title }}</h2>
+      {% endif %}
+  
+      {% if component.description %}
+        <p class="text-gray-500 mb-4">{{ component.description }}</p>
+      {% endif %}
+  
+      {# الفلاتر من JSON #}
+      {% set filters = component.filters ? component.filters|json_decode : [] %}
+      {% if filters %}
+        <form id="filters-form" class="mb-6 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+          {% for filter in filters %}
+            <div>
+              <label class="block font-semibold mb-1">{{ filter.label }}</label>
+              {% if filter.inputType == 'checkbox' %}
+                <input type="checkbox" name="{{ filter.key }}" class="form-checkbox">
+              {% elseif filter.inputType == 'text' %}
+                <input type="text" name="{{ filter.key }}" class="form-input">
+              {% endif %}
+            </div>
+          {% endfor %}
+        </form>
+      {% endif %}
+  
+      {# عرض المنتجات بناءً على source و source_value #}
+      <salla-products
+        source="{{ component.source }}"
+        source-value="{{ component.source_value }}"
+        layout="grid"
+        limit="12"
+      ></salla-products>
+    </div>
+  </section>
+  

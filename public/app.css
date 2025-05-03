@@ -529,6 +529,7 @@ select{background-image:url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/
 .mb-8{margin-bottom:2rem}
 .me-2\.5{margin-right:0.625rem}
 .ml-4{margin-left:1rem}
+.ml-auto{margin-left:auto}
 .mr-1{margin-right:0.25rem}
 .mr-2{margin-right:0.5rem}
 .mt-1{margin-top:0.25rem}
@@ -541,7 +542,6 @@ select{background-image:url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/
 .mt-5{margin-top:1.25rem}
 .mt-6{margin-top:1.5rem}
 .mt-8{margin-top:2rem}
-.ml-auto{margin-left:auto}
 .line-clamp-1{overflow:hidden;display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:1}
 .line-clamp-2{overflow:hidden;display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2}
 .block{display:block}
@@ -758,7 +758,6 @@ select{background-image:url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/
 .text-center{text-align:center}
 .text-start{text-align:left}
 .text-end{text-align:right}
-.align-middle{vertical-align:middle}
 .text-2xl{font-size:1.5rem;line-height:2rem}
 .text-3xl{font-size:1.875rem;line-height:2.25rem}
 .text-6xl{font-size:3.75rem;line-height:1}
@@ -6339,9 +6338,9 @@ lite-youtube.lyt-activated > .lty-playbtn {
 .hover\:text-dark:hover{--tw-text-opacity:1;color:rgba(29, 31, 31, 1);color:rgba(29, 31, 31, var(--tw-text-opacity, 1))}
 .hover\:text-primary:hover{color:#414042;color:var(--color-primary)}
 .hover\:underline:hover{text-decoration-line:underline}
+.hover\:opacity-70:hover{opacity:0.7}
 .hover\:opacity-80:hover{opacity:0.8}
 .hover\:opacity-90:hover{opacity:0.9}
-.hover\:opacity-70:hover{opacity:0.7}
 .hover\:shadow-default:hover{--tw-shadow:5px 10px 30px #2B2D340D;;--tw-shadow-colored:5px 10px 30px var(--tw-shadow-color);box-shadow:0 0 rgba(0,0,0,0), 0 0 rgba(0,0,0,0), 5px 10px 30px #2B2D340D;;box-shadow:var(--tw-ring-offset-shadow, 0 0 rgba(0,0,0,0)), var(--tw-ring-shadow, 0 0 rgba(0,0,0,0)), var(--tw-shadow)}
 .group:hover .group-hover\:-translate-x-1{--tw-translate-x:-0.25rem;transform:translate(-0.25rem, var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}
 @media (min-width: 640px){
@@ -6356,7 +6355,6 @@ lite-youtube.lyt-activated > .lty-playbtn {
 .sm\:block{display:block}
 .sm\:inline-flex{display:inline-flex}
 .sm\:grid{display:grid}
-.sm\:hidden{display:none}
 .sm\:h-auto{height:auto}
 .sm\:h-full{height:100%}
 .sm\:\!w-\[220px\]{width:220px !important}
@@ -6486,7 +6484,6 @@ lite-youtube.lyt-activated > .lty-playbtn {
 .ltr\:mr-4:where([dir="ltr"], [dir="ltr"] *){margin-right:1rem}
 .ltr\:mr-8:where([dir="ltr"], [dir="ltr"] *){margin-right:2rem}
 .ltr\:mr-auto:where([dir="ltr"], [dir="ltr"] *){margin-right:auto}
-.ltr\:mr-2\.5:where([dir="ltr"], [dir="ltr"] *){margin-right:0.625rem}
 .ltr\:rounded-l-none:where([dir="ltr"], [dir="ltr"] *){border-top-left-radius:0px;border-bottom-left-radius:0px}
 .ltr\:rounded-r-none:where([dir="ltr"], [dir="ltr"] *){border-top-right-radius:0px;border-bottom-right-radius:0px}
 .ltr\:border-r:where([dir="ltr"], [dir="ltr"] *){border-right-width:1px}
@@ -6534,7 +6531,6 @@ lite-youtube.lyt-activated > .lty-playbtn {
 .rtl\:mr-2:where([dir="rtl"], [dir="rtl"] *){margin-right:0.5rem}
 .rtl\:mr-3:where([dir="rtl"], [dir="rtl"] *){margin-right:0.75rem}
 .rtl\:mr-4:where([dir="rtl"], [dir="rtl"] *){margin-right:1rem}
-.rtl\:ml-2\.5:where([dir="rtl"], [dir="rtl"] *){margin-left:0.625rem}
 .rtl\:-scale-x-100:where([dir="rtl"], [dir="rtl"] *){--tw-scale-x:-1;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(-1) scaleY(var(--tw-scale-y));transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}
 .rtl\:space-x-reverse:where([dir="rtl"], [dir="rtl"] *) > :not([hidden]) ~ :not([hidden]){--tw-space-x-reverse:1}
 .rtl\:rounded-l-none:where([dir="rtl"], [dir="rtl"] *){border-top-left-radius:0px;border-bottom-left-radius:0px}

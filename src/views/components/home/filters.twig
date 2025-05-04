@@ -1,75 +1,21 @@
-{# <section class="s-block s-block--fixed-banner wide-placeholder">
-    <div class="container">
-        <salla-filters
-        id="vehicleFilters"
-        filters='[
-          {
-            "label": "الماركة",
-            "key": "الماركه",
-            "inputType": "checkbox",
-            "type": "variants",
-            "value": [
-              {
-                "key": "zara",
-                "value": "zara",
-                "count": 1,
-                "from": "*",
-                "to": "*"
-              }
-            ]
-          }
-        ]'>
-      </salla-filters>
-    </div>
-   
-  <div class="container"> <salla-products-list
-    id="carList"
-    source="categories"
-    source-value="1360317432"
-    limit="7"
-    
-    horizontal-cards="true">
-  </salla-products-list></div>
- 
-
-</section>
-  <script>
-  const filters = document.getElementById('vehicleFilters');
-  const productList = document.getElementById('carList');
-
-  filters.addEventListener('salla-filters::changed', (event) => {
-    productList.setFilters(event.detail);
-  });
-
-  document.addEventListener('salla-filters::re-render', () => {
-    productList.setFilters(filters.getSelectedFilters());
-  });
-</script>
-   #}
-   <!-- لازم يحمل سكريبت السلة أولاً -->
-
-{# داخل مكون مخصص أو داخل قالب الفئة مثلاً #}
-
 <section id="filter-products">
-  <!-- الفلاتر -->
-  <salla-filters
-    filters='[
-      {
-        "label": "الماركة",
-        "key": "brand",
-        "inputType": "checkbox",
-        "type": "variants",
-        "value": [
-          { "key": "zara", "count": 5, "value": "Zara" },
-         
-        ]
-      }
-    ]'
-    target-id="productList"
-    >
-  </salla-filters>
 
-  <!-- المنتجات المتأثرة بالفلاتر -->
+  <!-- فلاتر يدوية -->
+  <div id="custom-filters">
+    <h3>اختر المقاس:</h3>
+    <label><input type="checkbox" name="size" value="s"> S</label>
+    <label><input type="checkbox" name="size" value="m"> M</label>
+    <label><input type="checkbox" name="size" value="l"> L</label>
+
+    <h3>اختر الماركة:</h3>
+    <label><input type="checkbox" name="brand" value="zara"> Zara</label>
+    <label><input type="checkbox" name="brand" value="hm"> H&M</label>
+
+    <br>
+    <button id="apply-filters">تطبيق الفلاتر</button>
+  </div>
+
+  <!-- قائمة المنتجات -->
   <salla-products-list
     id="productList"
     source="categories"
@@ -77,15 +23,28 @@
     limit="20"
     pagination="true">
   </salla-products-list>
+
 </section>
+<script>
+  document.getElementById("apply-filters").addEventListener("click", function () {
+    const selectedSizes = Array.from(document.querySelectorAll("input[name='size']:checked")).map(el => el.value);
+    const selectedBrands = Array.from(document.querySelectorAll("input[name='brand']:checked")).map(el => el.value);
 
+    // نجهز الفلاتر بصيغة JSON وندخّلها في السورس
+    const filters = [];
 
-  {# <!-- مكوّن عرض المنتجات -->
-    <salla-products-list
-      id="carList"
-      source="categories"
-      source-value="1360317432"
-      limit="7"
-      
-      horizontal-cards="true">
-    </salla-products-list> #}
+    if (selectedSizes.length > 0) {
+      filters.push({ key: "size", type: "variants", value: selectedSizes });
+    }
+
+    if (selectedBrands.length > 0) {
+      filters.push({ key: "brand", type: "variants", value: selectedBrands });
+    }
+
+    const productList = document.getElementById("productList");
+
+    // نحط الفلاتر في الأتربيوت
+    productList.setAttribute("filters", JSON.stringify(filters));
+  });
+</script>
+{# ك #}

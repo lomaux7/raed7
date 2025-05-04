@@ -48,35 +48,39 @@
    #}
    <!-- لازم يحمل سكريبت السلة أولاً -->
 
-<section class="s-block s-block--fixed-banner wide-placeholder">
-  
-    <!-- مكوّن الفلاتر -->
-    <div id="product-filters">
-      <salla-filters
-        filters='[
-          {
-            "label": "By Brand",
-            "key": "categories",
-            "inputType": "checkbox",
-            "type": "variants",
-            "value": [
-              {
-                "key": "{{ brand.id }}",
-                "count": {{ brand.count }},
-                "value": "{{ brand.name }}",
-                "from": "*",
-                "to": "*"
-              }
-            ]
-          }
-        ]'
-      ></salla-filters>
-    </div>
-    
-  
+{# داخل مكون مخصص أو داخل قالب الفئة مثلاً #}
 
-  
-    {# <!-- مكوّن عرض المنتجات -->
+<section id="filter-products">
+  <!-- الفلاتر -->
+  <salla-filters
+    filters='[
+      {
+        "label": "الماركة",
+        "key": "brand",
+        "inputType": "checkbox",
+        "type": "variants",
+        "value": [
+          { "key": "zara", "count": 5, "value": "Zara" },
+         
+        ]
+      }
+    ]'
+    target-id="productList"
+    >
+  </salla-filters>
+
+  <!-- المنتجات المتأثرة بالفلاتر -->
+  <salla-products-list
+    id="productList"
+    source="categories"
+    source-value="1360317432"
+    limit="20"
+    pagination="true">
+  </salla-products-list>
+</section>
+
+
+  {# <!-- مكوّن عرض المنتجات -->
     <salla-products-list
       id="carList"
       source="categories"
@@ -85,7 +89,3 @@
       
       horizontal-cards="true">
     </salla-products-list> #}
-
-</section>
-
-

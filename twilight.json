@@ -1053,145 +1053,144 @@
             "icon": "sicon-store",
             "path": "header.advertisement",
             "fields": [
-              {
-                "id": "id",
-                "type": "number",
-                "format": "integer",
-                "inputType": "number",
-                "label": "Integer",
-                "description": "id",
-                "placeholder": "Input an integer number between 5 and 50.",
-                "icon": "sicon-hashtag",
-                "value": 0,
-                "required": false,
-                "minimum": 0,
-                "maximum": 50
-              },
-              {
-                "id": "icon",
-                "type": "string",
-                "format": "text",
-                "label": "Icon",
-                "description": "icon",
-                "placeholder": "Enter icon class",
-                "icon": "sicon-format-text-alt",
-                "value": null,
-                "required": false,
-                "minLength": 6,
-                "maxLength": 30
-              },
-              {
-                "id": "title",
-                "type": "string",
-                "format": "text",
-                "label": "Title",
-                "description": "title",
-                "placeholder": "Enter title",
-                "icon": "sicon-format-text-alt",
-                "value": null,
-                "required": false,
-                "minLength": 6,
-                "maxLength": 30
-              },
-              {
-                "id": "description",
-                "type": "string",
-                "format": "text",
-                "label": "Description",
-                "description": "description",
-                "placeholder": "Enter description",
-                "icon": "sicon-format-text-alt",
-                "value": null,
-                "required": false,
-                "minLength": 6,
-                "maxLength": 30
-              },
-              {
-                "id": "url",
-                "type": "string",
-                "format": "text",
-                "label": "URL",
-                "description": "url",
-                "placeholder": "Enter URL",
-                "icon": "sicon-format-text-alt",
-                "value": null,
-                "required": false,
-                "minLength": 6,
-                "maxLength": 30
-              },
-              {
-                "id": "close_url",
-                "type": "string",
-                "format": "text",
-                "label": "Close URL",
-                "description": "close_url",
-                "placeholder": "Enter Close URL",
-                "icon": "sicon-format-text-alt",
-                "value": null,
-                "required": false,
-                "minLength": 6,
-                "maxLength": 30
-              },
-              {
-                "id": "colors.bg",
-                "type": "string",
-                "format": "color",
-                "inputType": "color",
-                "label": "Background Color",
-                "description": null,
-                "icon": "sicon-format-fill",
-                "value": "#004956",
-                "required": false
-              },
-              {
-                "id": "colors.text",
-                "type": "string",
-                "format": "color",
-                "inputType": "color",
-                "label": "Text Color",
-                "description": null,
-                "icon": "sicon-format-fill",
-                "value": "#ffffff",
-                "required": false
-              },
-              {
-                "id": "target",
-                "type": "string",
-                "format": "text",
-                "label": "Target",
-                "description": "target",
-                "placeholder": "_self or _blank",
-                "icon": "sicon-format-text-alt",
-                "value": "_self",
-                "required": false,
-                "minLength": 5,
-                "maxLength": 10
-              }
+                {
+                    "id": "id",
+                    "type": "number",
+                    "format": "integer",
+                    "inputType": "number",
+                    "label": "Integer",
+                    "description": "id",
+                    "placeholder": "Input an integer number between 5 and 50.",
+                    "icon": "sicon-hashtag",
+                    "value": 0,
+                    "required": false,
+                    "minimum": 0,
+                    "maximum": 50
+                },
+                {
+                    "id": "icon",
+                    "type": "string",
+                    "format": "text",
+                    "label": "Icon",
+                    "description": "icon",
+                    "placeholder": "Enter icon class",
+                    "icon": "sicon-format-text-alt",
+                    "value": null,
+                    "required": false,
+                    "minLength": 6,
+                    "maxLength": 30
+                },
+                {
+                    "id": "title",
+                    "type": "string",
+                    "format": "text",
+                    "label": "Title",
+                    "description": "title",
+                    "placeholder": "Enter title",
+                    "icon": "sicon-format-text-alt",
+                    "value": null,
+                    "required": false,
+                    "minLength": 6,
+                    "maxLength": 30
+                },
+                {
+                    "id": "description",
+                    "type": "string",
+                    "format": "text",
+                    "label": "Description",
+                    "description": "description",
+                    "placeholder": "Enter description",
+                    "icon": "sicon-format-text-alt",
+                    "value": null,
+                    "required": false,
+                    "minLength": 6,
+                    "maxLength": 30
+                },
+                {
+                    "id": "url",
+                    "type": "string",
+                    "format": "text",
+                    "label": "URL",
+                    "description": "url",
+                    "placeholder": "Enter URL",
+                    "icon": "sicon-format-text-alt",
+                    "value": null,
+                    "required": false,
+                    "minLength": 6,
+                    "maxLength": 30
+                },
+                {
+                    "id": "close_url",
+                    "type": "string",
+                    "format": "text",
+                    "label": "Close URL",
+                    "description": "close_url",
+                    "placeholder": "Enter Close URL",
+                    "icon": "sicon-format-text-alt",
+                    "value": null,
+                    "required": false,
+                    "minLength": 6,
+                    "maxLength": 30
+                },
+                {
+                    "id": "colors.bg",
+                    "type": "string",
+                    "format": "color",
+                    "inputType": "color",
+                    "label": "Background Color",
+                    "description": null,
+                    "icon": "sicon-format-fill",
+                    "value": "#004956",
+                    "required": false
+                },
+                {
+                    "id": "colors.text",
+                    "type": "string",
+                    "format": "color",
+                    "inputType": "color",
+                    "label": "Text Color",
+                    "description": null,
+                    "icon": "sicon-format-fill",
+                    "value": "#ffffff",
+                    "required": false
+                },
+                {
+                    "id": "target",
+                    "type": "string",
+                    "format": "text",
+                    "label": "Target",
+                    "description": "target",
+                    "placeholder": "_self or _blank",
+                    "icon": "sicon-format-text-alt",
+                    "value": "_self",
+                    "required": false,
+                    "minLength": 5,
+                    "maxLength": 10
+                }
             ]
-          },
-          {
+        },
+        {
             "key": "filters-products-widget",
             "title": "فلترة وعرض المنتجات",
             "icon": "sicon-filter",
-            "path": "home.filters-products", 
+            "path": "home.filters-products",
             "fields": [
-              {
-                "id": "source",
-                "type": "string",
-                "format": "text",
-                "label": "نوع المصدر",
-                "value": "categories"
-              },
-              {
-                "id": "source_value",
-                "type": "string",
-                "format": "text",
-                "label": "معرّف المصدر",
-                "value": "123456"
-              }
+                {
+                    "id": "source",
+                    "type": "string",
+                    "format": "text",
+                    "label": "source",
+                    "value": "categories"
+                },
+                {
+                    "id": "source_value",
+                    "type": "string",
+                    "format": "text",
+                    "label": "source_value",
+                    "value": "123456"
+                }
             ]
-          }
-          
+        }
     ],
     "support_url": null,
     "description": {

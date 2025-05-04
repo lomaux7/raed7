@@ -1175,74 +1175,80 @@
             "icon": "sicon-filter",
             "path": "home.filters-products",
             "fields": [
-              {
-                "id": "filters",
-                "type": "string",
-                "format": "textarea",
-                "label": "الفلاتر",
-                "description": "أدخل إعدادات الفلاتر بصيغة JSON لتطبيقها على قائمة المنتجات.",
-                "placeholder": "[{\"label\": \"الفئة\", \"key\": \"categories\", \"inputType\": \"checkbox\"}]",
-                "icon": "sicon-filter",
-                "value": null,
-                "required": false,
-                "minLength": 10,
-                "maxLength": 1000
-              },
-              {
-                "id": "source",
-                "type": "string",
-                "format": "text",
-                "label": "المصدر",
-                "description": "مصدر المنتجات التي سيتم عرضها (مثل: categories, offers, products)",
-                "placeholder": "مثال: categories",
-                "icon": "sicon-database",
-                "value": "categories",
-                "required": true,
-                "minLength": 3,
-                "maxLength": 30
-              },
-              {
-                "id": "source_value",
-                "type": "string",
-                "format": "text",
-                "label": "قيمة المصدر",
-                "description": "رقم التصنيف أو المعرف المرتبط بالمصدر المحدد.",
-                "placeholder": "مثال: 123456",
-                "icon": "sicon-hash",
-                "value": "123456",
-                "required": true,
-                "minLength": 1,
-                "maxLength": 30
-              },
-              {
-                "id": "title",
-                "type": "string",
-                "format": "text",
-                "label": "عنوان القسم",
-                "description": "العنوان الذي يظهر فوق مكون الفلترة وعرض المنتجات.",
-                "placeholder": "مثال: منتجاتنا المختارة",
-                "icon": "sicon-heading",
-                "value": null,
-                "required": false,
-                "minLength": 6,
-                "maxLength": 50
-              },
-              {
-                "id": "description",
-                "type": "string",
-                "format": "text",
-                "label": "الوصف",
-                "description": "وصف مختصر يظهر تحت العنوان الرئيسي.",
-                "placeholder": "مثال: تصفح منتجاتنا حسب الفئة أو السعر",
-                "icon": "sicon-format-text-alt",
-                "value": null,
-                "required": false,
-                "minLength": 6,
-                "maxLength": 100
-              }
+                {
+                    "id": "filters",
+                    "type": "string",
+                    "format": "textarea",
+                    "label": "الفلاتر",
+                    "description": "أدخل إعدادات الفلاتر بصيغة JSON لتطبيقها على قائمة المنتجات.",
+                    "placeholder": "[{\"label\": \"الفئة\", \"key\": \"categories\", \"inputType\": \"checkbox\"}]",
+                    "icon": "sicon-filter",
+                    "value": null,
+                    "required": false,
+                    "minLength": 10,
+                    "maxLength": 1000
+                },
+                {
+                    "id": "source",
+                    "type": "string",
+                    "format": "text",
+                    "label": "المصدر",
+                    "description": "مصدر المنتجات التي سيتم عرضها (مثل: categories, offers, products)",
+                    "placeholder": "مثال: categories",
+                    "icon": "sicon-database",
+                    "value": "categories",
+                    "required": true,
+                    "minLength": 3,
+                    "maxLength": 30
+                },
+                {
+                    "id": "source_value",
+                    "type": "string",
+                    "format": "text",
+                    "label": "قيمة المصدر",
+                    "description": "رقم التصنيف أو المعرف المرتبط بالمصدر المحدد.",
+                    "placeholder": "مثال: 123456",
+                    "icon": "sicon-hash",
+                    "value": "123456",
+                    "required": true,
+                    "minLength": 1,
+                    "maxLength": 30
+                },
+                {
+                    "id": "title",
+                    "type": "string",
+                    "format": "text",
+                    "label": "عنوان القسم",
+                    "description": "العنوان الذي يظهر فوق مكون الفلترة وعرض المنتجات.",
+                    "placeholder": "مثال: منتجاتنا المختارة",
+                    "icon": "sicon-heading",
+                    "value": null,
+                    "required": false,
+                    "minLength": 6,
+                    "maxLength": 50
+                },
+                {
+                    "id": "description",
+                    "type": "string",
+                    "format": "text",
+                    "label": "الوصف",
+                    "description": "وصف مختصر يظهر تحت العنوان الرئيسي.",
+                    "placeholder": "مثال: تصفح منتجاتنا حسب الفئة أو السعر",
+                    "icon": "sicon-format-text-alt",
+                    "value": null,
+                    "required": false,
+                    "minLength": 6,
+                    "maxLength": 100
+                }
             ]
-          }
-          
+        },
+        {
+            "key": "11ed1193-9a94-4ab3-a661-1c104585dda5",
+            "title": "filters",
+            "icon": "sicon-dashboard",
+            "path": "home.filters",
+            "fields": []
+        }
     ],
     "support_url": null,
     "description": {

@@ -1330,5 +1330,13 @@
     "description": {
         "ar": "",
         "en": ""
-    }
+    },
+    
+        "webComponents": [
+          "salla-products-list",
+          "salla-filters",
+          "salla-infinite-scroll"
+        ]
+      
+      
 }

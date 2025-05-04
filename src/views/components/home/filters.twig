@@ -1,37 +1,91 @@
-<section class="py-6">
+{# <section class="s-block s-block--fixed-banner wide-placeholder">
     <div class="container">
-      {% if component.title %}
-        <h2 class="text-2xl font-bold mb-2">{{ component.title }}</h2>
-      {% endif %}
-  
-      {% if component.description %}
-        <p class="text-gray-500 mb-4">{{ component.description }}</p>
-      {% endif %}
-  
-      {# الفلاتر من JSON #}
-      {% set filters = component.filters ? component.filters|json_decode : [] %}
-      {% if filters %}
-        <form id="filters-form" class="mb-6 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
-          {% for filter in filters %}
-            <div>
-              <label class="block font-semibold mb-1">{{ filter.label }}</label>
-              {% if filter.inputType == 'checkbox' %}
-                <input type="checkbox" name="{{ filter.key }}" class="form-checkbox">
-              {% elseif filter.inputType == 'text' %}
-                <input type="text" name="{{ filter.key }}" class="form-input">
-              {% endif %}
-            </div>
-          {% endfor %}
-        </form>
-      {% endif %}
-  
-      {# عرض المنتجات بناءً على source و source_value #}
-      <salla-products
-        source="{{ component.source }}"
-        source-value="{{ component.source_value }}"
-        layout="grid"
-        limit="12"
-      ></salla-products>
+        <salla-filters
+        id="vehicleFilters"
+        filters='[
+          {
+            "label": "الماركة",
+            "key": "الماركه",
+            "inputType": "checkbox",
+            "type": "variants",
+            "value": [
+              {
+                "key": "zara",
+                "value": "zara",
+                "count": 1,
+                "from": "*",
+                "to": "*"
+              }
+            ]
+          }
+        ]'>
+      </salla-filters>
     </div>
-  </section>
+   
+  <div class="container"> <salla-products-list
+    id="carList"
+    source="categories"
+    source-value="1360317432"
+    limit="7"
+    
+    horizontal-cards="true">
+  </salla-products-list></div>
+ 
+
+</section>
+  <script>
+  const filters = document.getElementById('vehicleFilters');
+  const productList = document.getElementById('carList');
+
+  filters.addEventListener('salla-filters::changed', (event) => {
+    productList.setFilters(event.detail);
+  });
+
+  document.addEventListener('salla-filters::re-render', () => {
+    productList.setFilters(filters.getSelectedFilters());
+  });
+</script>
+   #}
+   <!-- لازم يحمل سكريبت السلة أولاً -->
+
+<section class="s-block s-block--fixed-banner wide-placeholder">
   
+    <!-- مكوّن الفلاتر -->
+    <div id="product-filters">
+      <salla-filters
+        filters='[
+          {
+            "label": "By Brand",
+            "key": "categories",
+            "inputType": "checkbox",
+            "type": "variants",
+            "value": [
+              {
+                "key": "{{ brand.id }}",
+                "count": {{ brand.count }},
+                "value": "{{ brand.name }}",
+                "from": "*",
+                "to": "*"
+              }
+            ]
+          }
+        ]'
+      ></salla-filters>
+    </div>
+    
+  
+
+  
+    {# <!-- مكوّن عرض المنتجات -->
+    <salla-products-list
+      id="carList"
+      source="categories"
+      source-value="1360317432"
+      limit="7"
+      
+      horizontal-cards="true">
+    </salla-products-list> #}
+
+</section>
+
+

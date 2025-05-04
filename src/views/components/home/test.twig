@@ -1,0 +1,115 @@
+{# <!-- بلوك فلترة السيارات -->
+<div id="car-filters">
+    <!-- اختيار الماركة (Make) -->
+    <label for="makeSelect">الماركة:</label>
+    <select id="makeSelect">
+      <option value="">اختر الماركة</option>
+      <!-- سيتم ملء الخيارات ديناميكياً -->
+    </select>
+  
+    <!-- اختيار الموديل (Model) -->
+    <label for="modelSelect">الموديل:</label>
+    <select id="modelSelect">
+      <option value="">اختر الموديل</option>
+      <!-- سيتم ملء الخيارات ديناميكياً -->
+    </select>
+  
+    <!-- اختيار السنة (Year) -->
+    <label for="yearSelect">السنة:</label>
+    <select id="yearSelect">
+      <option value="">اختر السنة</option>
+      <!-- سيتم ملء الخيارات ديناميكياً -->
+    </select>
+  
+    <!-- اختيار نوع المحرك (Engine) -->
+    <label for="engineSelect">المحرك:</label>
+    <select id="engineSelect">
+      <option value="">اختر نوع المحرك</option>
+      <!-- سيتم ملء الخيارات ديناميكياً -->
+    </select>
+  
+    <!-- زر لتطبيق الفلترة -->
+    <button id="filterBtn">تطبيق الفلترة</button>
+</div>
+
+<!-- مكون TwilightJS لعرض قائمة المنتجات المصفاة -->
+<salla-products-list id="carList" limit="20"></salla-products-list>
+
+<!-- تضمين Twilight JS SDK -->
+<script src="https://unpkg.com/@salla.sa/twilight"></script>
+
+<script>
+  // بلوك الفلترة: الدالة التي تتعامل مع الفلاتر
+  async function initializeCarFilters(containerId, products) {
+    const container = document.getElementById(containerId);
+    const makeSelect = container.querySelector('#makeSelect');
+    const modelSelect = container.querySelector('#modelSelect');
+    const yearSelect = container.querySelector('#yearSelect');
+    const engineSelect = container.querySelector('#engineSelect');
+    const filterBtn = container.querySelector('#filterBtn');
+
+    // ملء الخيارات بالفلاتر الديناميكية
+    function populateSelect(selectElement, options) {
+      options.forEach(option => {
+        const opt = document.createElement('option');
+        opt.value = option;
+        opt.textContent = option;
+        selectElement.appendChild(opt);
+      });
+    }
+
+    // تعبئة فلاتر الماركة والموديل والسنة والمحرك
+    const makes = [...new Set(products.map(p => p.brand?.name).filter(Boolean))];
+    const models = [...new Set(products.map(p => p.model).filter(Boolean))];
+    const years = [...new Set(products.map(p => p.year).filter(Boolean))];
+    const engines = [...new Set(products.map(p => p.engine).filter(Boolean))];
+
+    populateSelect(makeSelect, makes);
+    populateSelect(modelSelect, models);
+    populateSelect(yearSelect, years);
+    populateSelect(engineSelect, engines);
+
+    // دالة لاسترداد وعرض المنتجات بناءً على الفلاتر
+    async function filterProducts() {
+      const make = makeSelect.value;
+      const model = modelSelect.value;
+      const year = yearSelect.value;
+      const engine = engineSelect.value;
+
+      const filters = {};
+      if (make) filters.brands = [make];
+      if (model) filters.categories = [model];
+
+      try {
+        const response = await salla.products.searchProducts({
+          keyword: '',
+          query: '',
+          type: 'keyword',
+          categories: filters.categories || [],
+          brands: filters.brands || []
+        });
+
+        let filteredProducts = response.data.data;
+        if (year) {
+          filteredProducts = filteredProducts.filter(p => p.year == year);
+        }
+        if (engine) {
+          filteredProducts = filteredProducts.filter(p => p.engine == engine);
+        }
+
+        const productListEl = document.getElementById('carList');
+        await productListEl.setFilters(filters);
+        
+      } catch (error) {
+        console.error('خطأ في جلب المنتجات:', error);
+      }
+    }
+
+    // تعيين معالج الحدث لنقرة زر "تطبيق الفلترة"
+    filterBtn.addEventListener('click', filterProducts);
+  }
+
+  // استدعاء الدالة مع المنتجات
+  const sampleProducts = [];  // استبدله بالقائمة الفعلية من المنتجات
+  initializeCarFilters('car-filters', sampleProducts);
+</script> #}

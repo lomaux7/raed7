@@ -7,7 +7,30 @@
 #}
 {% extends "layouts.master" %}
 {% block content %}
-    {% component home %}    
+    {% component home %}
+    
+    <div id="product-filters">
+        <salla-filters
+          filters='[
+            {
+              "label": "By Brand",
+              "key": "categories",
+              "inputType": "checkbox",
+              "type": "variants",
+              "value": [
+                {
+                  "key": "{{ brand.id }}",
+                  "count": {{ brand.count }},
+                  "value": "{{ brand.name }}",
+                  "from": "*",
+                  "to": "*"
+                }
+              ]
+            }
+          ]'
+        ></salla-filters>
+      </div>
+      
 {% endblock %}
 {% block scripts %}
     <script defer src="{{ 'home.js' | asset }}"></script>

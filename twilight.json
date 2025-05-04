@@ -1247,7 +1247,38 @@
             "title": "filters",
             "icon": "sicon-dashboard",
             "path": "home.filters",
-            "fields": []
+            "fields": [
+                {
+                    "id": "filters",
+                    "type": "string",
+                    "format": "textarea",
+                    "label": "الفلاتر",
+                    "description": "أدخل إعدادات الفلاتر بصيغة JSON لتطبيقها على قائمة المنتجات.",
+                    "labelHTML": null,
+                    "placeholder": "Your[{\"label\": \"الفئة\", \"key\": \"categories\", \"inputType\": \"checkbox\"}] text here",
+                    "icon": "sicon-typography",
+                    "value": null,
+                    "multilanguage": false,
+                    "required": false,
+                    "minLength": "10",
+                    "maxLength": "1000"
+                },
+                {
+                    "id": "source",
+                    "type": "string",
+                    "format": "text",
+                    "label": "المصدر",
+                    "description": "مصدر المنتجات التي سيتم عرضها (مثل: categories, offers, products)",
+                    "labelHTML": null,
+                    "placeholder": "مثال: categories",
+                    "icon": "sicon-format-text-alt",
+                    "value": "categories",
+                    "multilanguage": false,
+                    "required": false,
+                    "minLength": "3",
+                    "maxLength": 30
+                }
+            ]
         }
     ],
     "support_url": null,

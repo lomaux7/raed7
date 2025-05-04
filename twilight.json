@@ -1274,9 +1274,54 @@
                     "icon": "sicon-format-text-alt",
                     "value": "categories",
                     "multilanguage": false,
-                    "required": false,
+                    "required": true,
                     "minLength": "3",
                     "maxLength": 30
+                },
+                {
+                    "id": "source_value",
+                    "type": "string",
+                    "format": "text",
+                    "label": "قيمة المصدر",
+                    "description": "رقم التصنيف أو المعرف المرتبط بالمصدر المحدد.",
+                    "labelHTML": null,
+                    "placeholder": "مثال: 123456",
+                    "icon": "sicon-format-text-alt",
+                    "value": "123456",
+                    "multilanguage": false,
+                    "required": true,
+                    "minLength": "1",
+                    "maxLength": 30
+                },
+                {
+                    "id": "title",
+                    "type": "string",
+                    "format": "text",
+                    "label": "عنوان القسم",
+                    "description": "العنوان الذي يظهر فوق مكون الفلترة وعرض المنتجات.",
+                    "labelHTML": null,
+                    "placeholder": "مثال: منتجاتنا المختارة",
+                    "icon": "sicon-format-text-alt",
+                    "value": "مثال منتجاتنا المختارة",
+                    "multilanguage": false,
+                    "required": false,
+                    "minLength": 6,
+                    "maxLength": "50"
+                },
+                {
+                    "id": "description",
+                    "type": "string",
+                    "format": "text",
+                    "label": "الوصف",
+                    "description": "وصف مختصر يظهر تحت العنوان الرئيسي.",
+                    "labelHTML": null,
+                    "placeholder": "مثال: تصفح منتجاتنا حسب الفئة أو السعر",
+                    "icon": "sicon-format-text-alt",
+                    "value": "مثال: تصفح منتجاتنا حسب الفئة أو السعر",
+                    "multilanguage": false,
+                    "required": false,
+                    "minLength": 6,
+                    "maxLength": "100"
                 }
             ]
         }

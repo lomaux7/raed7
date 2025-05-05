@@ -1,18 +1,17 @@
-<section id="filter-products">
-
-  <!-- فلاتر يدوية -->
-  <div id="custom-filters">
+<section class="container py-10">
+  <!-- واجهة يدوية للفلاتر -->
+  <div id="custom-filters" style="margin-bottom: 20px;">
     <h3>اختر المقاس:</h3>
     <label><input type="checkbox" name="size" value="s"> S</label>
     <label><input type="checkbox" name="size" value="m"> M</label>
     <label><input type="checkbox" name="size" value="l"> L</label>
+    <label><input type="checkbox" name="size" value="xl"> XL</label>
 
     <h3>اختر الماركة:</h3>
     <label><input type="checkbox" name="brand" value="zara"> Zara</label>
     <label><input type="checkbox" name="brand" value="hm"> H&M</label>
 
-    <br>
-    <button id="apply-filters">تطبيق الفلاتر</button>
+    <button id="apply-filters" style="margin-top: 20px; padding: 10px 20px; background-color: #007bff; color: white; border: none; border-radius: 5px;">تطبيق الفلاتر</button>
   </div>
 
   <!-- قائمة المنتجات -->
@@ -23,28 +22,29 @@
     limit="20"
     pagination="true">
   </salla-products-list>
-
 </section>
+
 <script>
   document.getElementById("apply-filters").addEventListener("click", function () {
+    // جمع القيم المحددة في الفلاتر
     const selectedSizes = Array.from(document.querySelectorAll("input[name='size']:checked")).map(el => el.value);
     const selectedBrands = Array.from(document.querySelectorAll("input[name='brand']:checked")).map(el => el.value);
 
-    // نجهز الفلاتر بصيغة JSON وندخّلها في السورس
-    const filters = [];
+    // تجهيز الفلاتر في صيغة JSON حسب توثيق سلة
+    const filters = {};
 
     if (selectedSizes.length > 0) {
-      filters.push({ key: "size", type: "variants", value: selectedSizes });
+      filters['size'] = selectedSizes;
     }
-
     if (selectedBrands.length > 0) {
-      filters.push({ key: "brand", type: "variants", value: selectedBrands });
+      filters['brand'] = selectedBrands;
     }
 
+    // إرسال الفلاتر عبر الحدث المناسب
     const productList = document.getElementById("productList");
-
-    // نحط الفلاتر في الأتربيوت
-    productList.setAttribute("filters", JSON.stringify(filters));
+    productList.dispatchEvent(new CustomEvent('salla:products:filters', {
+      detail: filters,
+      bubbles: true
+    }));
   });
 </script>
-{# ك #}

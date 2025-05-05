@@ -71,7 +71,8 @@
         window.imageZoom = "{{theme.settings.get('imageZoom')}}"
         window.can_access_wallet = {{ user.can_access_wallet | json_encode }}
     </script>
-    
+
+    <script src="{{ asset('assets/my-custom-product-card.js') }}"></script>
     {% hook 'head:start' %}
     {% hook head %}
     {% block styles %}{% endblock %}

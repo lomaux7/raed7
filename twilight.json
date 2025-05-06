@@ -6,11 +6,7 @@
     "repository": "https://github.com/lomaux7/raed7",
     "author_email": "eslamsf99@gmail.com",
     "features": [
-        // "mega-menu",
-        // "fonts",
-        // "color",
-        // "breadcrumb",
-        // "unite-cards-height",
+        
         "component-featured-products",
         "component-fixed-banner",
         "component-fixed-products",

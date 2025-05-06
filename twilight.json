@@ -9,7 +9,7 @@
         "mega-menu",
         "fonts",
         "color",
-       
+        "breadcrumb",
         "unite-cards-height",
         "component-featured-products",
         "component-fixed-banner",
@@ -21,8 +21,8 @@
         "component-square-photos",
         "component-store-features",
         "component-youtube",
-        "menu-images"
-        
+        "menu-images",
+        "filters"
     ],
     "settings": [
         {

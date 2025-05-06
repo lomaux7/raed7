@@ -22,7 +22,8 @@
         "component-store-features",
         "component-youtube",
         "menu-images",
-        "filters"
+        "filters",
+        "component-random-testimonials"
     ],
     "settings": [
         {
@@ -1331,12 +1332,9 @@
         "ar": "",
         "en": ""
     },
-    
-        "webComponents": [
-          "salla-products-list",
-          "salla-filters",
-          "salla-infinite-scroll"
-        ]
-      
-      
+    "webComponents": [
+        "salla-products-list",
+        "salla-filters",
+        "salla-infinite-scroll"
+    ]
 }

@@ -6,15 +6,24 @@
     "repository": "https://github.com/lomaux7/raed7",
     "author_email": "eslamsf99@gmail.com",
     "features": [
-        "mega-menu",
-        "fonts",
-        "color",
-        "breadcrumb",
-        "unite-cards-height",
-       
+        // "mega-menu",
+        // "fonts",
+        // "color",
+        // "breadcrumb",
+        // "unite-cards-height",
+        "component-featured-products",
+        "component-fixed-banner",
+        "component-fixed-products",
+        "component-products-slider",
+        "component-photos-slider",
+        "component-parallax-background",
+        "component-testimonials",
+        "component-square-photos",
+        "component-store-features",
+        "component-youtube",
         "menu-images",
-        "filters"
-        
+        "filters",
+        "component-random-testimonials"
     ],
     "settings": [
         {

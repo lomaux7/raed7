@@ -9,7 +9,7 @@
         "mega-menu",
         "fonts",
         "color",
-       
+        "breadcrumb",
         "unite-cards-height",
         "component-featured-products",
         "component-fixed-banner",
@@ -22,8 +22,8 @@
         "component-store-features",
         "component-youtube",
         "menu-images",
-        "filters",
-        "component-random-testimonials"
+        "filters"
+        
     ],
     "settings": [
         {
@@ -1331,10 +1331,6 @@
     "description": {
         "ar": "",
         "en": ""
-    },
-    "webComponents": [
-        "salla-products-list",
-        "salla-filters",
-        "salla-infinite-scroll"
-    ]
+    }
+    
 }

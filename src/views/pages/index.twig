@@ -7,14 +7,11 @@
 #}
 {% extends "layouts.master" %}
 {% block content %}
-{% set filters = true %}
 
-    <salla-filters class="md:w-72 lg:sticky lg:top-20 flex-none" id="filters-menu"></salla-filters>
 
     {% component home %}
      
 {% endblock %}
 {% block scripts %}
-<script defer src="{{ 'product.js' | asset }}"></script>
     <script defer src="{{ 'home.js' | asset }}"></script>
 {% endblock %}

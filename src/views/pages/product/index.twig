@@ -18,6 +18,34 @@
 #}
 {% extends "layouts.master" %}
 {% block content %}
+<div class="bg-primary p-4 rounded-lg flex flex-wrap items-center gap-2 justify-center">
+  <!-- نوع السيارة -->
+  <select class="form-input w-40 bg-white text-black">
+    <option>نوع السيارة</option>
+    <!-- باقي الخيارات -->
+  </select>
+
+  <!-- التوصيل -->
+  <select class="form-input w-40 bg-white text-black">
+    <option>التوصيل</option>
+  </select>
+
+  <!-- السنة -->
+  <select class="form-input w-32 bg-white text-black">
+    <option>السنة</option>
+  </select>
+
+  <!-- المحرك -->
+  <select class="form-input w-32 bg-white text-black">
+    <option>المحرك</option>
+  </select>
+
+  <!-- زر البحث -->
+  <button class="bg-black text-white font-bold px-6 py-2 rounded hover:bg-gray-800">
+    بحث
+  </button>
+</div>
+
     <div class="container px-2.5 ms:px-5 mb-10">
         {# add breadcumbs container in pages to make a space in case breadcrumbs is off #}
         <nav class="breadcrumbs w-full py-5">
